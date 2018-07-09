@@ -9,16 +9,16 @@ export const logIn = (user) => {
   };
 };
 
-export const logout = () => {
+export const logOut = () => {
   return (dispatch) => {
     APIUtil.logOut().then( () => dispatch(logoutCurrentUser()));
   };
 };
 
 
-export const signup = (user) => {
+export const signUp = (user) => {
   return (dispatch) => {
-    APIUtil.logIn(user).then( (user) => dispatch(receiveCurrentUser(user)));
+    APIUtil.signUp(user).then( (user) => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
   };
 };
 

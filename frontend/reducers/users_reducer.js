@@ -6,7 +6,7 @@ export const userReducer = (state = {}, action ) => {
 
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return merge({}, state, {[action.user.id]: action.user}); // ask why we need to define the key in a bracket
+      return merge({}, state, {[action.currentUser.id]: action.currentUser}); // ask why we need to define the key in a bracket
     default:
       return state;
   }

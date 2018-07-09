@@ -4,7 +4,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_ac
 export default (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return {id: action.user.id};
+      return {id: action.currentUser.id};
     case LOGOUT_CURRENT_USER:
       return {id: null};
     default:
