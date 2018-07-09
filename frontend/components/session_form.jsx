@@ -16,6 +16,7 @@ class sessionForm extends React.Component {
   }
 
   render() {
+    debugger
     if (this.props.isLoggedIn){
       return <Redirect to="/"/>;
     }
@@ -25,7 +26,7 @@ class sessionForm extends React.Component {
           <Link to="/signup">sign up</Link>  ;
 
     const errors = this.props.errors.map((error, idx) => {
-      return (<li key={idx} value={error}></li>);
+      return (<li key={idx}>{error}</li>);
     });
 
     return(

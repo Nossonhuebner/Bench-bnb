@@ -5,7 +5,7 @@ import {signUp} from '../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const isLoggedIn =  (!!state.entities.users[state.session.id]);
-  const errors = Object.values(state.errors) || [];
+  const errors = state.errors.session;
 
   return { errors: errors ,  formType: 'signup', isLoggedIn: isLoggedIn};
 };
